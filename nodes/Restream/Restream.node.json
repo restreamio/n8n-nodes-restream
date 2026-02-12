@@ -1,0 +1,18 @@
+{
+	"node": "@restream/n8n-nodes-restream",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Marketing & Content", "Communication"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://developers.restream.io/docs"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://developers.restream.io/docs"
+			}
+		]
+	}
+}
