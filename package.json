@@ -4,8 +4,15 @@
 	"description": "n8n node for the Restream API",
 	"license": "MIT",
 	"homepage": "https://github.com/restreamio/n8n-nodes-restream",
+	"publishConfig": {
+		"access": "public"
+	},
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"n8n",
+		"restream",
+		"streaming",
+		"live-streaming"
 	],
 	"author": {
 		"name": "Oleksii Siryi",
