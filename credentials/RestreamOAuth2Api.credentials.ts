@@ -36,7 +36,7 @@ export class RestreamOAuth2Api implements ICredentialType {
 			displayName: 'Scope',
 			name: 'scope',
 			type: 'hidden',
-			default: 'profile.default.read clips.default.read',
+			default: 'profile.default.read clips.default.read stream.default.read storage.default.read',
 		},
 		{
 			displayName: 'Auth URI Query Parameters',

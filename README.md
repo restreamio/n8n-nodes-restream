@@ -22,6 +22,14 @@ For more details, see the [installation guide](https://docs.n8n.io/integrations/
 
 ## Operations
 
+- Event
+    - Get an event by ID
+    - Get event history (finished and missed events)
+    - Get in-progress events
+    - Get upcoming events
+- Event Recording
+    - Get recordings for an event
+    - Get a download URL for a recording
 - Clip Project
     - Get many clip projects
     - Get a clip project
@@ -39,6 +47,18 @@ This node uses OAuth2 authentication.
 ## Compatibility
 
 Tested with n8n@2.7.4.
+
+## Upgrading
+
+### v0.2.0 — Event and Recording endpoints
+
+This version adds new OAuth2 scopes (`stream.default.read` and `storage.default.read`) required for the new Event and Event Recording operations. **Existing users must reconnect their Restream OAuth2 credentials** to grant these new permissions:
+
+1. Open your n8n credentials page.
+2. Find your Restream OAuth2 credential.
+3. Click **Reconnect** to re-authorize with the updated scopes.
+
+Existing Clip and Clip Project operations are unaffected and will continue to work without reconnecting.
 
 ## Resources
 
