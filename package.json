@@ -1,6 +1,6 @@
 {
 	"name": "@restream/n8n-nodes-restream",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "n8n node for the Restream API",
 	"license": "MIT",
 	"homepage": "https://github.com/restreamio/n8n-nodes-restream",
