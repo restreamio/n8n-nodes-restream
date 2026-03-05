@@ -1,6 +1,8 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 import { clipProjectDescription } from './resources/clipProject';
 import { clipDescription } from './resources/clip';
+import { eventDescription } from './resources/event';
+import { eventRecordingDescription } from './resources/eventRecording';
 
 export class Restream implements INodeType {
 	description: INodeTypeDescription = {
@@ -10,7 +12,7 @@ export class Restream implements INodeType {
 		group: ['input'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Access Restream Clips using the Restream API',
+		description: 'Access Restream Events, Recordings, and Clips using the Restream API',
 		defaults: {
 			name: 'Restream',
 		},
@@ -38,6 +40,14 @@ export class Restream implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
+						name: 'Event',
+						value: 'event',
+					},
+					{
+						name: 'Event Recording',
+						value: 'eventRecording',
+					},
+					{
 						name: 'Clip Project',
 						value: 'clipProject',
 					},
@@ -48,6 +58,8 @@ export class Restream implements INodeType {
 				],
 				default: 'clipProject',
 			},
+			...eventDescription,
+			...eventRecordingDescription,
 			...clipProjectDescription,
 			...clipDescription,
 		],
